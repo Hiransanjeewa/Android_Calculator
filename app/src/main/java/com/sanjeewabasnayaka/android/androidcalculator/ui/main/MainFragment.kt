@@ -40,7 +40,7 @@ class MainFragment : Fragment() {
 
         viewModel.result.observe(viewLifecycleOwner, Observer {
             message.text=it.toString()
-        })
+        })// Listing to the changes of result
         var addButton = view.findViewById<Button>(R.id.addButton)
 
         addButton.setOnClickListener {
