@@ -6,7 +6,9 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Button
 import android.widget.TextView
+import androidx.lifecycle.Observer
 import com.sanjeewabasnayaka.android.androidcalculator.R
 import org.w3c.dom.Text
 
@@ -32,9 +34,18 @@ class MainFragment : Fragment() {
     ): View {
         var view= inflater.inflate(R.layout.fragment_main, container, false)
 
-        var message=view?.findViewById<TextView>(R.id.message)
-        if (message!=null){
-            message.text= "Hiran"
+        var message=view.findViewById<TextView>(R.id.message)
+
+
+
+        viewModel.result.observe(viewLifecycleOwner, Observer {
+            message.text=it.toString()
+        })
+        var addButton = view.findViewById<Button>(R.id.addButton)
+
+        addButton.setOnClickListener {
+            viewModel.add(Math.random()*12,6.0)
+
         }
         return view
     }
