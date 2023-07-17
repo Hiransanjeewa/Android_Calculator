@@ -1,3 +1,13 @@
 <resources>
     <string name="app_name">Android Calculator</string>
+    <string name="enter_first_number">Enter First Number</string>
+    <string name="enter_second_number">Enter Second Number</string>
+    <string name="calculation_result_is" />
+    <string name="add">ADD</string>
+    <string name="subtract">Substract</string>
+    <string name="product">Multiply</string>
+    <string name="divide">Divide</string>
+
+    <string name="clear">Clear Inputs</string>
+    <string name="welcome">Two number Calculator</string>
 </resources>

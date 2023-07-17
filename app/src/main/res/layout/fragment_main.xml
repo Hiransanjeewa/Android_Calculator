@@ -7,22 +7,133 @@
     android:layout_height="match_parent"
     tools:context=".ui.main.MainFragment">
 
+
+    <TextView
+        android:id="@+id/welcome"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/welcome"
+        android:textSize="40sp"
+        android:textAlignment="center"
+        android:textStyle="bold"
+
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.025" />
+
+    <EditText
+        android:id="@+id/textBox1"
+        android:hint="@string/enter_first_number"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="50sp"
+        android:layout_marginEnd="50sp"
+        android:layout_marginBottom="20sp"
+        android:textSize="30sp"
+        android:textAlignment="center"
+        android:inputType="number"
+        app:layout_constraintBottom_toTopOf="@id/textBox2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        android:autofillHints="First_number" />
+
+    <EditText
+        android:id="@+id/textBox2"
+        android:hint="@string/enter_second_number"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="50sp"
+        android:layout_marginEnd="50sp"
+        android:layout_marginBottom="10sp"
+        android:textSize="30sp"
+        android:textAlignment="center"
+        android:inputType="number"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/message"
+        android:autofillHints="Second_Number" />
+
+
+
     <TextView
         android:id="@+id/message"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="MainFragment"
+        android:textSize="40sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <Button
-        android:id="@+id/addButton"
-        android:layout_width="wrap_content"
+        android:id="@+id/clearButton"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Button"
-        tools:layout_editor_absoluteX="158dp"
-        tools:layout_editor_absoluteY="545dp" />
+        android:layout_marginTop="6dp"
+
+        android:layout_marginStart="50sp"
+        android:layout_marginEnd="50sp"
+
+
+        android:text="@string/clear"
+        android:textSize="20sp"
+        app:layout_constraintTop_toBottomOf="@id/message"
+        tools:layout_editor_absoluteX="0dp" />
+
+    <Button
+        android:id="@+id/addButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+        android:layout_marginStart="50sp"
+        android:layout_marginEnd="50sp"
+
+        android:layout_marginTop="12dp"
+        android:text="@string/add"
+        android:textSize="20sp"
+        app:layout_constraintTop_toBottomOf="@id/clearButton"
+        tools:layout_editor_absoluteX="0dp">
+
+    </Button>
+
+    <Button
+        android:id="@+id/substractButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10sp"
+        android:layout_marginStart="50sp"
+        android:layout_marginEnd="50sp"
+        android:textSize="20sp"
+        android:text="@string/subtract"
+        app:layout_constraintTop_toBottomOf="@id/addButton">
+    </Button>
+    <Button
+        android:id="@+id/divButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10sp"
+        android:layout_marginStart="50sp"
+        android:layout_marginEnd="50sp"
+        android:textSize="20sp"
+        android:text="@string/divide"
+        app:layout_constraintTop_toBottomOf="@id/substractButton">
+    </Button>
+    <Button
+        android:id="@+id/multiplyButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10sp"
+        android:layout_marginStart="50sp"
+        android:layout_marginEnd="50sp"
+        android:textSize="20sp"
+        android:text="@string/product"
+        app:layout_constraintTop_toBottomOf="@id/divButton">
+    </Button>
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -13,22 +13,22 @@ class MainViewModel : ViewModel() {
     // Stream ? synchronous/ asynchronous
     fun addition(number1: Double,number2: Double){
         result.value = number1.plus(number2)
-        println(result);
+        println(result.value);
         Log.d("Result of addition-->", result.toString())
     }
     fun subtraction(number1: Double,number2: Double){
         result.value = number1.minus(number2)
-        println(result);
+        println(result.value);
         Log.d("Result of subtraction-->", result.toString())
     }
     fun multiplication(number1: Double,number2: Double){
-        result.value = number1.div(number2)
-        println(result);
+        result.value = number1.times(number2)
+        println(result.value);
         Log.d("Result of multiplication-->", result.toString())
     }
     fun division(number1: Double,number2: Double){
         result.value = number1.div(number2)
-        println(result);
+        println(result.value);
         Log.d("Result of division-->", result.toString())
     }
 }
