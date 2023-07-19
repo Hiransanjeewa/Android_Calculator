@@ -17,9 +17,9 @@ class MainFragment : Fragment() {
 
     companion object {
         fun newInstance() = MainFragment()
-    }
+    }// Main fragment , Main fragment only interact with on ViewModel for one view
 
-    private lateinit var viewModel: MainViewModel
+    private lateinit var viewModel: MainViewModel   // making the direct connection to ViewModel
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -58,7 +58,7 @@ class MainFragment : Fragment() {
 
         // message.text=viewModel.result.value.toString()
         viewModel.result.observe(viewLifecycleOwner, Observer {
-            message.text=it.toString()
+            message.text=it.toString() // listening to result value changes
         })
 
         fun checkInputs(): Boolean {
